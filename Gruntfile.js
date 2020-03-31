@@ -308,7 +308,7 @@ module.exports = function(grunt) {
 
     });
 
-    var buildTasks = [
+    grunt.registerTask('build', [
         'clean',
         'jekyll',
         'useminPrepare',
@@ -322,9 +322,7 @@ module.exports = function(grunt) {
         'sri_hash',
         'doctype',
         'htmlmin'
-    ];
-
-    grunt.registerTask('build', buildTasks);
+    ]);
 
     grunt.registerTask('test', [
         'build',
